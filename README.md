@@ -1,4 +1,4 @@
-# Add Css To ACF Field
+# Add CSS To ACF Field
 This is an add-on for Advanced Custom Fields (ACF) which allows you to add CSS to each ACF field.
 
 # Description

@@ -1,6 +1,8 @@
 # Add CSS To ACF Field
 This is an add-on for Advanced Custom Fields (ACF) which allows you to add CSS to each ACF field.
 
+![add css to acf field](https://github.com/pressmaninc/add-css-to-acf-field/blob/main/screenshot/screenshot-1.png?raw=true "add css to acf field")
+
 # Description
 This plugin allows you to add CSS to each field in Advanced Custom Fields to adjust the appearance of them.
 For example, you can remove unnecessary titles/label with ease.

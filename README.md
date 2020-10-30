@@ -2,17 +2,9 @@
 This is an add-on for Advanced Custom Fields (ACF) which allows you to add CSS to each ACF field.
 
 # Description
-This plugin allows you to add a CSS to each field in Advanced Custom Fields to adjust the display of each field.
-By adding CSS, you can remove unnecessary titles and adjust the appearance of the input fields to make them easier to use.
-You can also use your own filter hooks to change the CSS externally.
-
-# Features
-* Original CSS can be added for each ACF field.
-* You can add original CSS to each ACF field.
-* CSS can be changed using filter hooks.
-
-# Notice
-Advanced Custom Fields required.
+This plugin allows you to add CSS to each field in Advanced Custom Fields to adjust the appearance of them.
+For example, you can remove unnecessary titles/label with ease.
+You can also use a filter hooks to modify the CSS externally.
 
 # Installation
 1. Upload the plugin to the plugins directory.

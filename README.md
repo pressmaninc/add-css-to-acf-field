@@ -6,6 +6,11 @@ This plugin allows you to add CSS to each field in Advanced Custom Fields to adj
 For example, you can remove unnecessary titles/label with ease.
 You can also use a filter hooks to modify the CSS externally.
 
+# Requirements
+Requires at least: WordPress 5.5
+Tested up to: WordPress 5.5.1
+Requires PHP: 5.6.39
+
 # Installation
 1. Upload the plugin to the plugins directory.
 2. Login to the dashboard and activate the plugin.

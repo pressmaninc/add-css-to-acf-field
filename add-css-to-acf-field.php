@@ -89,8 +89,24 @@ class Add_Css_To_Acf_Field {
 	public function add_css_input( $field ) {
 		$value = ( isset( $field[ $this->plugin_name ] ) ) ? $field[ $this->plugin_name ] : '';
 		acf_render_field_wrap( array(
-				'label'        => __( 'Custom CSS', $this->plugin_textdomain ),
-				'instructions' => __( '<p>You can use <strong style="color:#170">_this_field_key</strong> or <strong style="color:#170">_this_field_name</strong> as this field"s selector.<br>Example: <br><code><strong style="color:#170">_this_field_key</strong> { background: #ff00ff; }</code></p><p>If you want a selector which works only for ACF block, use <strong style="color:#170">_block_field_key</strong> or <strong style="color:#170">_block_field_name</strong> instead.</p><p>*Properly strip all HTML tags including script and style.</p>', $this->plugin_textdomain ),
+				'label'        => esc_html__( 'Custom CSS', $this->plugin_textdomain ),
+				'instructions' => sprintf(
+					'<p>%1$s<br>%2$s<br><code><strong style="color:#170">_this_field_key</strong> { background: #ff00ff; }</code></p><p>%3$s</p><p>%4$s</p>',
+					sprintf(
+						/* translators: 1: Merge tag '_this_field_key'. 2: Merge tag '_this_field_name'. */
+						esc_html__( 'You can use %1$s or %2$s as this field\'s selector.', $this->plugin_textdomain ),
+						'<strong style="color:#170">_this_field_key</strong>',
+						'<strong style="color:#170">_this_field_name</strong>'
+					),
+					esc_html__( 'Example:', $this->plugin_textdomain ),
+					sprintf(
+						/* translators: 1: Merge tag '_block_field_key'. 2: Merge tag '_block_field_name'. */
+						esc_html__( 'If you want a selector which works only for ACF block, use %1$s or %2$s instead.', $this->plugin_textdomain ),
+						'<strong style="color:#170">_block_field_key</strong>',
+						'<strong style="color:#170">_block_field_name</strong>'
+					),
+					esc_html__( '* Properly strip all HTML tags including script and style.', $this->plugin_textdomain )
+				),
 				'required'     => 0,
 				'type'         => 'textarea',
 				'name'         => $this->plugin_name,

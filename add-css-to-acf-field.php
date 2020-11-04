@@ -79,7 +79,7 @@ class Add_Css_To_Acf_Field {
 	 * @return void
 	 */
 	public function acf_invalid_admin_notices() {
-		echo __( '<div class="error"><p>To use the <code>Add CSS to ACF Field</code>, please activate the <code>Advanced Custom Fields(PRO)</code>.</p></div>', $this->plugin_textdomain );
+		echo '<div class="error"><p>' . esc_html__( 'To use the <code>Add CSS to ACF Field</code>, please activate the <code>Advanced Custom Fields(PRO)</code>.', $this->plugin_textdomain ) . '</p></div>';
 	}
 
 	/**

@@ -18,5 +18,11 @@ Requires PHP: 5.6.39
 2. Login to the dashboard and activate the plugin.
 
 # Changelog
+##1.0.2
+Bugfix.
+
+##1.0.1
+[i18n] Improve translation strings
+
 ##1.0.0
 First Version.

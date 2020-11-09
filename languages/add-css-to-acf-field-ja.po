@@ -21,8 +21,8 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: add-css-to-acf-field.php:82
-msgid "To use the <code>Add CSS to ACF Field</code>, please activate the <code>Advanced Custom Fields(PRO)</code>."
-msgstr "<code>Add CSS to ACF Field</code>を使用するには、<code>Advanced Custom Fields(PRO)</code>を有効化してください。"
+msgid "To use the <code>Add CSS to ACF Field</code>, please activate the <code>Advanced Custom Fields</code>."
+msgstr "<code>Add CSS to ACF Field</code>を使用するには、<code>Advanced Custom Fields</code>を有効化してください。"
 
 #: add-css-to-acf-field.php:92
 msgid "Custom CSS"

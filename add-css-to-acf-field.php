@@ -79,7 +79,7 @@ class Add_Css_To_Acf_Field {
 	 * @return void
 	 */
 	public function acf_invalid_admin_notices() {
-		echo '<div class="error"><p>' . esc_html__( 'To use the <code>Add CSS to ACF Field</code>, please activate the <code>Advanced Custom Fields(PRO)</code>.', $this->plugin_textdomain ) . '</p></div>';
+		echo '<div class="error"><p>' . esc_html__( 'To use the <code>Add CSS to ACF Field</code>, please activate the <code>Advanced Custom Fields</code>.', $this->plugin_textdomain ) . '</p></div>';
 	}
 
 	/**
@@ -264,9 +264,8 @@ class Add_Css_To_Acf_Field {
 		);
 	}
 
-	public function update_post_custom_values( $post_id ) {
-		$screen = get_current_screen();
-		if ( 'acf-field-group' !== $screen->post_type ) {
+	public function update_post_custom_values( $post_id, $data ) {
+		if ( 'acf-field-group' !== $data->post_type ) {
 			return;
 		}
 

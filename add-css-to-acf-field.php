@@ -3,7 +3,7 @@
 Plugin Name: Add CSS to ACF Field
 Plugin URI:
 Description: Allow ACF to add a unique css for each field (Can be a field group for block. There are hooks. Can determine if it's a block.)
-Version: 1.0.0
+Version: 1.0.2
 Author: PRESSMAN
 Author URI: https://www.pressman.ne.jp/
 Text Domain: add-css-to-acf-field

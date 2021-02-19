@@ -3,7 +3,7 @@
 Plugin Name: Add CSS to ACF Field
 Plugin URI:
 Description: Allow ACF to add a unique css for each field (Can be a field group for block. There are hooks. Can determine if it's a block.)
-Version: 1.0.2
+Version: 1.0.5
 Author: PRESSMAN
 Author URI: https://www.pressman.ne.jp/
 Text Domain: add-css-to-acf-field
@@ -130,12 +130,17 @@ class Add_Css_To_Acf_Field {
 	 * @param array $field
 	 */
 	public function output_css( $field ) {
-		// Get the current screen object
-		$screen = get_current_screen();
 
-		// Exclude the ACF configuration screen as it results in an error.
-		if ( 'acf-field-group' === $screen->post_type ) {
-			return;
+		if ( is_admin() ) {
+
+			// Get the current screen object
+			$screen = get_current_screen();
+
+			// Exclude the ACF configuration screen as it results in an error.
+			if ( 'acf-field-group' === $screen->post_type ) {
+				return;
+			}
+
 		}
 
 		// Ajax block call.
@@ -265,7 +270,7 @@ class Add_Css_To_Acf_Field {
 	}
 
 	public function update_post_custom_values( $post_id, $data ) {
-		if ( 'acf-field-group' !== $data->post_type ) {
+		if ( 'acf-field-group' !== $data['post_type'] ) {
 			return;
 		}
 
@@ -280,7 +285,7 @@ class Add_Css_To_Acf_Field {
 				acf_update_field( $fields[ $i ] );
 			}
 		}
-	} 
+	}
 
 }
 
